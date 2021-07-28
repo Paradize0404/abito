@@ -1,12 +1,16 @@
 body {
-  font-family: 'Roboto', sans-serif; /*Шрифт*/
+  font-family: "Roboto", sans-serif; /*Шрифт*/
   font-size: 14px; /*Размер шрифта*/
-  color: #0A143A; /*Цвет текста*/
+  color: #0a143a; /*Цвет текста*/
 }
-.header {
+.conteiner {
   max-width: 1146px; /*Максимальная ширина*/
   margin: auto; /*Автоматическое выравнивание по середине*/
+}
+.header {
   padding-top: 30px; /*Отступ сверху*/
+  padding-bottom: 30px;
+  margin-bottom: 12px;
 }
 .navbar {
   margin-bottom: 24px; /*Отступ снизу*/
@@ -15,7 +19,7 @@ body {
   justify-content: space-around; /*Разбросатть элементы по краям*/
 }
 .navbar-menu {
-  margin-right: auto; /*Автоматический отступ справа */ 
+  margin-right: auto; /*Автоматический отступ справа */
 }
 .menu {
   list-style: none; /*Отключение точек в списках*/
@@ -27,7 +31,6 @@ body {
 /* Для всех пунктов меню кроме последнего */
 .menu-item:not(:last-child) {
   margin-right: 14px; /*Отступ справа 14 пикселей*/
-
 }
 .menu-link {
   text-decoration: none; /*Отключаем подчеркивания */
@@ -43,30 +46,30 @@ body {
   color: inherit;
 }
 .button-primary {
-  background-color: #256EEB;
+  background-color: #256eeb;
   border-radius: 5px; /*Скругление углов*/
   color: white; /*Цвет шрифта*/
 }
 .search-panel {
   height: 50px; /*Высота блока*/
-  background: #256EEB;
+  background: #256eeb;
   border-radius: 5px;
   display: flex;
   padding: 3px;
-  
 }
 .search-input {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 5px;
   flex-grow: 1; /*Растягивается на все свободное место*/
   border: none; /*Отключаем обводку*/
   padding-left: 22px;
   padding-right: 22px;
+  outline: none;
 }
 .search-button {
-  background: #256EEB;
+  background: #256eeb;
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
   padding-left: 20px;
   padding-right: 17px;
   display: flex;
@@ -74,4 +77,98 @@ body {
 }
 .search-button-text {
   margin-left: 5px;
+}
+.page-content {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  grid-column-gap: 30px;
+}
+.card-image {
+  border-radius: 10px;
+  width: 264px;
+  height: 178px;
+  object-fit: cover;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  margin-bottom: 20px;
+}
+.card:not(:nth-child(3n)) {
+  margin-right: 20px;
+}
+.card-link {
+  text-decoration: none;
+}
+.card-title {
+  font-size: 16px;
+  line-height: 19px;
+  color: #256eeb;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.like {
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.card-price {
+  font-size: 16px;
+  line-height: 19px;
+  color: #0a143a;
+  margin-bottom: 10px;
+  display: block;
+}
+.card-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #c4c4c4;
+  margin-top: 0px;
+}
+.service {
+  margin-bottom: 25px;
+}
+.service-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
+.service-text {
+  font-size: 14px;
+  line-height: 16px;
+  max-width: 217px;
+}
+.sidebar .page-title {
+  font-size: 18px;
+  line-height: 21px;
+}
+.footer-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #c4c4c4;
+  margin-bottom: 5px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.footer-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 16px;
+}
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 5px;
 }
